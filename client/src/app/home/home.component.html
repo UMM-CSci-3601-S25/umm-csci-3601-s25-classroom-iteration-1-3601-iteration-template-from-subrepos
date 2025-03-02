@@ -1,14 +1,24 @@
 <div class="flex-row">
   <div class="flex-1">
-    <mat-card class="home-card">
-      <mat-card-header>
-        <mat-card-title>
-          Home
-        </mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        This is a home page! It doesn't do anything!
-      </mat-card-content>
-    </mat-card>
-  </div>
+
+    <mat-grid-list cols="2" rowHeight="2:1">
+
+
+      <mat-grid-tile>
+        <button mat-fab extended color="warn" style="color: rgb(255, 255, 255); width: 500px; height: 300px;" routerLink="/about" [routerLink]="['/host']" routerLinkActive="HostJoinButton">
+          <mat-icon matListItemIcon>menu</mat-icon>
+          Host a game
+        </button>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <button mat-fab extended color="primary" style="color: rgb(255, 255, 255); width: 500px; height: 300px;;" routerLink="/join" [routerLink]="['/player']" routerLinkActive="PlayerJoinButton">
+          <mat-icon matListItemIcon>videogame_asset</mat-icon>
+          Join a game
+        </button>
+      </mat-grid-tile>
+
+
+    </mat-grid-list>
+
 </div>
